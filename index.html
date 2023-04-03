@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Cliff Reynard, Pradipta Dwi Arymurti, Syahid Bandoro Suryo, Bayu Aji Wibisono">
+	<meta name="description" content="Symphony of Life adalah game virtual pet simple dengan berbagai fitur.">
+	<title>TechPeduli</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+
+<body onload="initGame()">
+	<header>
+		<img class="logo" src="imgs/logo.png">
+		<h1>Symphony of Life</h1>
+	</header>
+
+	<div id="start-screen">
+		<h2>Choose Avatar:</h2>
+
+		<div id="avatar-container">
+			<label>
+				<input type="radio" name="avatar" value="Lance" data-evolution="1" checked>
+				<img src="imgs/Lance-1.gif" alt="Avatar 1" draggable="false">
+			</label>
+			<label>
+				<input type="radio" name="avatar" value="Brynhildr" data-evolution="1">
+				<img src="imgs/Brynhildr-1.gif" alt="Avatar 2" draggable="false">
+			</label>
+			<label>
+				<input type="radio" name="avatar" value="Prima" data-evolution="1">
+				<img src="imgs/Prima-1.gif" alt="Avatar 3" draggable="false">
+			</label>
+		</div>
+
+		<h2>Enter Username:</h2>
+		<input type="text" id="username-input" placeholder="Username">
+		<button id="start-btn" onclick="startGame()">Start</button>
+	</div>
+
+	<!-- after game start load this div-->
+	<div id="game-screen" style="display: none;">
+		<div class="clock">
+			<span id="clock"></span>
+		</div>
+
+		<div class="status-bar-container">
+			<div class="status-bar">
+			  <p><img src="imgs/hunger.png">Hunger</p>
+			  <progress id="hunger-bar" max="100" value="50"></progress>
+			</div>
+			<div class="status-bar">
+			  <p><img src="imgs/energy.png">Energy</p>
+			  <progress id="energy-bar" max="100" value="50"></progress>
+			</div>
+		  </div>
+		  <div class="status-bar-container">
+			<div class="status-bar">
+			  <p><img src="imgs/happiness.png">Happiness</p>
+			  <progress id="happiness-bar" max="100" value="50"></progress>
+			</div>
+			<div class="status-bar">
+			  <p><img src="imgs/health.png">Health</p>
+			  <progress id="health-bar" max="100" value="50"></progress>
+			</div>
+		</div>
+		
+		<div id="level"></div>
+
+		<div id="greeting"></div>
+
+		<div id="avatar-display">
+			<img id="avatar-gif" src="#" alt="Avatar" draggable="false">
+		</div>
+
+		<div class="button">
+			<button class="feed">Feed</button>
+			<button class="sleep">Sleep</button>
+			<button class="pill">Pill</button>
+			<button class="play">Play</button>
+		</div>
+
+		<div id="minigame-container" style="display: none;">
+			<div class="minigame-exit" onclick="closeMinigame()">X</div>
+			<canvas id="minigame" width="100" height="100"></canvas>
+			<p>Use W,A,S,D to move</p>
+		</div>
+	</div>
+
+	<div id="game-over-overlay" style="display: none;">
+		<div class="overlay-content">
+		  <h1>Game Over</h1>
+		  <button id="restart-btn">Restart</button>
+		</div>
+	</div>
+
+	<footer>
+		<p>TechPeduli &copy; 2023</p>
+		<p>Cliff Reynard, Pradipta Dwi Arymurti, Syahid Bandoro Suryo, Bayu Aji Wibisono</p>
+	</footer>
+<script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
