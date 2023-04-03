@@ -1,10 +1,28 @@
-let hours = 6;
-let minutes = 0;
+// Function to get the current time
+function getCurrentTime() {
+  const now = new Date();
+  return {
+    hours: now.getHours(),
+    minutes: now.getMinutes(),
+  };
+}
+
+// Initialize current hours and minutes
+let { hours, minutes } = getCurrentTime();
 let rainEndTime = null;
 let thunderEndTime = null;
 let eventCheckTimeout = null;
 let isClockRunning = false;
 let gameOverDisplayed = false;
+
+function toggleBGM() {
+	const bgm = document.getElementById('bgm');
+	if (bgm.paused) {
+		bgm.play();
+	} else {
+		bgm.pause();
+	}
+}
 
 function getGameTime() {
   let paddedHours = hours.toString().padStart(2, '0');
@@ -228,11 +246,10 @@ function startGame() {
 	gameScreen.style.display = 'block';
 	bodyElement.classList.add('game-background');
 	
-	level.textContent = `Level ${avatarEvolution}`
+	level.textContent = `Level ${avatarEvolution}`;
 
 	// Reset the gameTime
-	hours = 6;
-	minutes = 0;
+	({ hours, minutes } = getCurrentTime());
   
 	changeBackground();
 	updateClock(); // Call the updateClock function here
