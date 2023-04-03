@@ -11,6 +11,7 @@ https://github.com/ShinPurinn/Symphony-of-Life
 - Bayu Aji Wibisono
 
 # Features
+- BGM Audio
 - Customizable avatar
 - Day and night cycle
 - Random weather events
