@@ -30,6 +30,9 @@ https://github.com/ShinPurinn/Symphony-of-Life
     - Play: Open a minigame to increase happiness
 - The game ends when the health bar reaches 0. You can restart the game by clicking the 'Restart' button.
 
+# Gameplay Demo
+- https://drive.google.com/file/d/1WcCA3d06b8crNaV9hJTnYi6ABhBO_W7Y/view?usp=share_link
+
 # File Structure
 - index.html: Contains the structure of the game, including avatar selection, start screen, game screen, status bars, buttons, and minigame canvas.
 - styles.css: Contains the styling for the game, including the background images, button styles, and game layout.
