@@ -1,6 +1,9 @@
 # Symphony-of-Life
 Symphony of Life is a simple virtual pet game where you can take care of an avatar, feed it, make it sleep, give it medicine, and play with it. The game also has a background that changes according to the in-game time, as well as random weather events. The virtual pet evolves after certain intervals, and the game ends when the health bar reaches 0.
 
+# Github Link
+https://github.com/ShinPurinn/Symphony-of-Life
+
 # Created by TechPeduli
 - Cliff Reynard
 - Pradipta Dwi Arymurti
